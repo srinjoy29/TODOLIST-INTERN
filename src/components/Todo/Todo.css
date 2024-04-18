@@ -1,0 +1,253 @@
+/**
+ * Styles for the Todo component in the Todolist application.
+ * This CSS file defines the styles for the Todo card, the todos wrapper, the todo heading, the todo form and controls, and the todo items.
+ * It also includes media queries for mobile devices to adjust the layout and styles.
+ */
+/**
+ * Styles a todo card component with a width of 600px, height of 520px, light blue background color, rounded corners, padding, and a top margin of 80px. The card is centered using align-self: center.
+ */
+.todo-card {
+  width: 600px;
+  height: 520px;
+  background-color: #c4e4ff;
+  border-radius: 10px;
+  padding: 7px;
+  margin-top: 80px;
+  align-self: center;
+  color: #000000;
+}
+
+/**
+ * Wraps the todo items and provides a scrollable container with a height of 500 pixels.
+ */
+.todos-wrapper {
+  padding: 2px 5px;
+  height: 500px;
+  overflow-y: auto;
+}
+
+/**
+ * Styles the heading for the Todo list component.
+ * The heading is centered and has a larger font size and weight to make it stand out.
+ */
+.todo-heading {
+  margin: 5px auto;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+/**
+ * A checkbox UI element used within the Todo component.
+ * The checkbox has a width and height of 22 pixels, and a cursor style of 'pointer' to indicate it is clickable.
+ * The checkbox is positioned with 5 pixels of margin-right to provide spacing from adjacent elements.
+ */
+.check-box {
+  margin-right: 5px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+/**
+ * Applies flexbox styles to the `.todo-form` and `.todo-controls` elements to center their child elements vertically.
+ * This ensures the form and controls are aligned properly within the Todo component.
+ */
+.todo-form,
+.todo-controls {
+  display: flex;
+  align-items: center;
+}
+
+/**
+ * Styles the input field for a todo item. The input field has a transparent background,
+ * no border, black text color, no outline, a font size of 23px, and fills the available
+ * space within the todo item container.
+ */
+.todo-input {
+  background: transparent;
+  border: none;
+  color: #000000;
+  outline: none;
+  font-size: 23px;
+  flex: 1;
+}
+
+/**
+ * Applies a placeholder style to the `.todo-input` element, setting the text color to `#ddd`.
+ */
+.todo-input::placeholder {
+  color: #ddd;
+}
+
+/**
+ * Styles for the todo item and form components.
+ * 
+ * The `.todo-form` and `.todo-item` classes apply styles to the todo form and individual todo items, respectively.
+ * These styles include:
+ * - Margin of 7 pixels
+ * - 2 pixel solid border with color #091265 and 3 pixel border radius
+ * - Padding of 4 pixels vertically and 5 pixels horizontally
+ * - Flex layout with space between items and centered alignment
+ * - Font size of 23 pixels
+ */
+.todo-form,
+.todo-item {
+  margin: 7px;
+  border: 2px solid #091265;
+  border-radius: 3px;
+  padding: 4px 5px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 23px;
+}
+
+/**
+ * Applies a hover effect to the `.todo-item` class, changing the background color to `rgb(252, 194, 255)`.
+ * This is likely used to provide visual feedback when the user hovers over a todo item.
+ */
+.todo-item:hover {
+  background: rgb(252, 194, 255);
+}
+
+/**
+ * Wraps the todo item in a flex container to align the todo text and controls.
+ */
+.todo-wrapper {
+  display: flex;
+}
+
+/* Limit number of characters */
+/**
+ * Limits the width of the todo text to 230 pixels, and hides any overflow with ellipsis.
+ * This ensures the todo text is displayed in a single line without wrapping.
+ */
+.todo-text {
+  max-width: 230px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/**
+ * Styles the container for the todo controls, aligning the items to the center and adding left margin automatically.
+ */
+.todo-controls {
+  align-items: center;
+  margin-left: auto;
+}
+
+/**
+ * Applies a hover effect to the `.todo-controls` element, changing the text color to white.
+ * This style is likely used to provide visual feedback when the user hovers over the controls
+ * for a todo item.
+ */
+.todo-controls:hover {
+  color: #ffffff;
+}
+
+/**
+ * Applies styles to the control elements (buttons, etc.) within the todo-controls container.
+ * Ensures the controls have a consistent cursor style and spacing.
+ */
+.todo-controls > * {
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+/**
+ * A CSS class that applies a cursor pointer style to an element.
+ * This is typically used to indicate that an element is clickable or interactive.
+ */
+.btn-control {
+  cursor: pointer;
+}
+
+/**
+ * Styles for the "Add" button in the Todo component.
+ * This button is used to add new todo items to the list.
+ * The button has a white background, no border, bold font weight,
+ * dark gray text color, small padding, and rounded corners.
+ * The button also has a hover effect that changes the background
+ * color to a light blue and the text color to white.
+ */
+.btn-add {
+  background: #fff;
+  border: none;
+  font-weight: bold;
+  color: #222;
+  padding: 4px 7px;
+  border-radius: 3px;
+}
+
+/**
+ * Applies a hover style to the "btn-add" class, changing the background color to rgb(7, 138, 213) and the text color to white.
+ */
+.btn-add:hover {
+  background: rgb(7, 138, 213);
+  color: white;
+}
+
+/**
+ * Applies a font size of 26px to the `.input-edit` class.
+ * This is likely used to style the input field for editing a todo item.
+ */
+.input-edit {
+  font-size: 26px;
+}
+
+/**
+ * Applies padding of 2.7 pixels to the top and bottom of an element with the class "todo-edit".
+ */
+.todo-edit {
+  padding: 2.7px 0;
+}
+
+/**
+ * Adds a small margin to the left of the "Edit" button in the Todo component.
+ */
+.btn-edit {
+  margin-left: 4px;
+}
+
+.completed {
+  color: #616161;
+  text-decoration: line-through; /* This line adds the strike-through effect */
+}
+
+/**
+ * A button that cancels an action or operation.
+ * The button has a red color and no border or background, and the cursor changes to a pointer on hover.
+ */
+.cancel {
+  color: #ff0000;
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Media query for mobile */
+@media only screen and (max-width: 450px) {
+  .todo-card {
+    width: calc(100% - 6px); /* Adjust width to fit within the viewport */
+    height: auto; /* Adjust height to fit content */
+    margin-top: 100px; /* Adjust margin for mobile */
+    padding-right: 16px; /* Adjust padding */
+    border-radius: 10px; /* Adjust border radius */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .btn-add {
+    background: #fff;
+    border: none;
+    font-weight: bold;
+    color: #222;
+    padding: 8px 5px; /* Adjust padding for mobile */
+    border-radius: 3px;
+    width: 100%; /* Make the button full width */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    max-width: 100%; /* Ensure the button doesn't exceed the container width */
+  }
+}

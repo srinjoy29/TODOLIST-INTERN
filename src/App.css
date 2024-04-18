@@ -1,0 +1,44 @@
+
+:root{
+  --green: #86AC41;
+  --blue: #4CB5F5;
+}
+
+.App {
+  display: grid;
+  width: fit-content;
+  grid-gap: 40px;
+  align-items: center;
+  padding: 20px;
+  margin: 10px auto;
+  overflow: hidden;
+  font-family: "Poppins", helvetica, arial, sans-serif;
+}
+
+
+body{
+  background-color: #2ec4ab;
+  color: #FFFFFF;
+  background-image: url('./assets/laptop-alarm-clock-notepads-yellow-background.jpg'); /* Path to your background image */
+  background-size: cover; /* Ensure the background image covers the entire body */
+  background-position: center; /* Center the background image */
+  background-repeat: repeat; /* Do not repeat the background image */
+  
+}
+
+
+
+
+
+
+button{
+  background-color: transparent;
+  color: #ffffffa4;
+  border:0;
+  display: inline-block;
+  width: 100px;
+  cursor: pointer;
+}
+
+
+
